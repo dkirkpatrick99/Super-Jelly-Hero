@@ -1,0 +1,78 @@
+body {
+  background-image: url('../assets/image/pixlbg.png');
+  background-size: 100%;
+  font-family: 'VT323';
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 5px 10px 10px 5px;
+  color: crimson;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 22px;
+}
+
+p {
+  font-size: 25px;
+  margin: 10px 10px 10px 10px;
+}
+
+li {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.jelly-hero {
+  display: flex;
+}
+
+#super-jelly-hero {
+  width: 1075px;
+  height: 604px;
+  display: block;
+  margin-left: 60px;
+  margin-right: 50px;
+  border: 2px solid black;
+  background: url('../assets/image/backg.png') fixed;
+  background-position-y: 54px;
+  background-position-x: 240px;
+}
+
+.high-scores {
+  border: 1px solid black;
+  width: 25%;
+  margin-left: 10px;
+}
+
+.directions {
+  border: 1px solid black;
+  width: 30%;
+  margin-right: 10px;
+}
+
+
+.controls {
+  list-style: none;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+
+
+
+
+
