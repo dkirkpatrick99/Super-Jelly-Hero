@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/sjh.css">
+    <link rel="icon" href="../assets/img/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Jelly Hero</title>
     <script type="application/javascript" src="./bundle.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
 </head>
 <body>
   <h1>Super Jelly Hero Forever!</h1>
@@ -23,12 +27,13 @@
     </div>
     
     <canvas id="super-jelly-hero"></canvas>
-    <!-- <div id="game-over-modal">
+
+    <div id="game-over-modal">
       <h2>Play Again?</h2>
       <div class="game-over-choice">
         <a href="#" id="game-over-yes">Yes</a> / <a href="#" id="game-over-no">No</a>
       </div>
-    </div> -->
+    </div>
 
     <div class="directions">
       <h2>Controls</h2>
@@ -49,6 +54,12 @@
       <p>
       </p>
     </div>
+  </div>
+
+  <div class="personal-info">
+    <a href="https://www.linkedin.com/in/brian-liew-b6246655/"><img class="linkedin" src="../assets/image/icons/linkedin-black.png" alt="linkedin-img"></a>
+    <a href="https://github.com/bliew93"><img class="github" src="../assets/image/icons/gh-black.png" alt="github-img"></a>
+          <a href="http://brianliew.com/"><img class="personal" src="../assets/image/icons/personal-black.png" alt="personal-img"></a>
   </div>
     
     

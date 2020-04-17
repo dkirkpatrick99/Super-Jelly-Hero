@@ -10,6 +10,7 @@ class Game {
         this.acceleration = acceleration;
         this.jellyHero = jellyHero;
         this.gameOver = false;
+        this.jellyDead = false;
         this.coinCounter = 0;
         this.portalTouch = false;
         this.portal;
@@ -119,7 +120,7 @@ class Game {
     
               const dir = this.collisionCheck(this.jellyHero, {x: platformX, y: platformY, width: platformWidth, height: platformHeight });
               
-              if(dir) this.gameOver = true;
+              if(dir) this.jellyDead = true;
 
               this.context.drawImage(this.tiles2Img, 500, 460, 60, 60, platformX, platformY, platformWidth, platformHeight);
 
@@ -218,7 +219,7 @@ class Game {
       }
 
       animatePortal() {
-        let yInt = [430, 530, 630]
+        let yInt = [630, 530, 430]
         let i = 0
           let int = setInterval(() => {
             i += 1
@@ -282,6 +283,31 @@ class Game {
         }
         else if (dir === "t") {
           this.jellyHero.velocityY *= -1;
+        }
+      }
+
+      drawLevelMessages(currentLevel) {
+        switch(currentLevel) {
+          case 0:
+            return 'Press "A" to move left, "D" to move right and "W" to jump! Get the key!';
+          case 1:
+            return 'Hold "W" and the direction against a wall. Climb dat wall!!';
+          case 2:
+            return 'Woah, lava! Watch out!!';
+          case 3:
+            return 'Some will crumble beneath the pressure, but not you Jelly Hero!'
+          case 4:
+            return 'It\'s recess. The world\'s your jungle Jelly Hero!';
+          case 5:
+            return '';
+          case 6:
+          case 7:
+            return 'Show me your ninja skills boi!';
+          case 8:
+            return 'Last level. Just go for it boi!';
+        
+          default:
+            return '';
         }
       }
 

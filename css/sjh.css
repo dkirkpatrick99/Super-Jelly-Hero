@@ -7,9 +7,10 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
   margin: 5px 10px 10px 5px;
   color: crimson;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -56,6 +57,16 @@ li {
   margin-left: 10px;
 }
 
+.high-scores h2 {
+  font-size: 40px;
+}
+
+#scores-table {
+  font-size: 30px;
+}
+
+
+
 .directions {
   border: 1px solid black;
   width: 30%;
@@ -71,8 +82,62 @@ li {
   padding-left: 20px;
 }
 
+#game-over-modal {
+  display: none;
+  width: 500px;
+  height: 200px;
+  background-color: rgba(221, 14, 14, 0.4);
+  position: fixed;
+  text-align: center;
+  font-size: 35px;
+  margin-left: 675px;
+  margin-top: 220px;
+}
 
+#game-over-modal h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  
+}
 
+.game-over-choice {
+  display: block;
+  margin-bottom: 10px;
+  color: green;
+}
 
+#game-over-modal a {
+  text-decoration: none;
+}
+
+/* .game-over-modal input {
+
+} */
+
+#game-over-modal button {
+  background: orange;
+}
+
+.github:hover {
+  content: url('../assets/image/icons/gh-white.png');
+}
+
+.linkedin:hover {
+  content: url('../assets/image/icons/linkedin-white.png');
+}
+
+.personal:hover {
+  content: url('../assets/image/icons/personal-white.png');
+}
+
+.personal-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.personal-info a {
+  margin-right: 85px;
+}
 
 
