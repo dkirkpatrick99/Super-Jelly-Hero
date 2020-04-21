@@ -18,10 +18,11 @@ class Game {
         this.coin;
 
 console.log("GAME FILE a;sdfjas;lkdfj;askf")
+this.tilesImg = new Image();
+this.tilesImg.src = "../foresttiles01.png";
+console.log("trying root for img")
         // this.tilesImg = new Image();
         // this.tilesImg.src = "../assets/image/foresttiles01.png";
-        this.tilesImg = new Image();
-        this.tilesImg.src = "../assets/image/backg.png";
         this.tiles2Img = new Image();
         this.tiles2Img.src = "../assets/image/eobstacles2.png";
         this.tiles3Img = new Image();
