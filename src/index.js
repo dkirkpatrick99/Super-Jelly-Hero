@@ -6,14 +6,7 @@ import 'firebase/database';
 import * as firebase from 'firebase/app';
 
 
-// var config = {
-//   apiKey: "AIzaSyBi9R0BOE_GN6o3aR0di5j7OScUwchNh4c",
-//   authDomain: "super-jelly-hero.firebaseapp.com",
-//   databaseURL: "https://super-jelly-hero.firebaseio.com",
-//   projectId: "super-jelly-hero",
-//   storageBucket: "super-jelly-hero.appspot.com",
-//   messagingSenderId: "483452085698"
-// };
+
 
 var config = {
   apiKey: "AIzaSyCEppeHF1lnm_ZLt00I8Ry_ihtar3O5utQ",
