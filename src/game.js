@@ -18,19 +18,19 @@ class Game {
         this.coin;
 
 console.log("GAME FILE a;sdfjas;lkdfj;askf")
-this.tilesImg = new Image();
-this.tilesImg.src = "../foresttiles01.png";
-console.log("trying abs path for image !!!!!!!!!!!!!!!!")
-        // this.tilesImg = new Image();
-        // this.tilesImg.src = "../assets/image/foresttiles01.png";
+// this.tilesImg = new Image();
+// this.tilesImg.src = "../foresttiles01.png";
+console.log("trying abs path for ALL image ????????????")
+        this.tilesImg = new Image();
+        this.tilesImg.src = "assets/image/foresttiles01.png";
         this.tiles2Img = new Image();
         this.tiles2Img.src = "assets/image/eobstacles2.png";
         this.tiles3Img = new Image();
-        this.tiles3Img.src = "./assets/image/flevelmenu.png";
+        this.tiles3Img.src = "assets/image/flevelmenu.png";
         this.keysImg = new Image();
-        this.keysImg.src = "../assets/image/keytilesreal.png";
+        this.keysImg.src = "assets/image/keytilesreal.png";
         this.coinsImg = new Image();
-        this.coinsImg.src = "../assets/image/cointiles.png";
+        this.coinsImg.src = "assets/image/cointiles.png";
     }
 
     drawLevel(level) {
