@@ -17,10 +17,6 @@ class Game {
         this.interval;
         this.coin;
 
-console.log("GAME FILE a;sdfjas;lkdfj;askf")
-// this.tilesImg = new Image();
-// this.tilesImg.src = "../foresttiles01.png";
-console.log("trying abs path for ALL image ????????????")
         this.tilesImg = new Image();
         this.tilesImg.src = "assets/image/foresttiles01.png";
         this.tiles2Img = new Image();

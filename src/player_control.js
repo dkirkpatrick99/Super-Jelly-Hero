@@ -15,7 +15,6 @@ class Player {
       
           this.heroImg = new Image();
           this.heroImg.src = "assets/image/menumeatboy.png";
-          console.log("player change @@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
           this.right = false;
           this.left = false;
     }
