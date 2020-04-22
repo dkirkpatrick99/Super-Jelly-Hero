@@ -19,6 +19,14 @@ class Player {
           this.left = false;
     }
 
+    jellyWalk() {
+
+      
+        setInterval(() => {
+          this.x += 1
+        },10);
+    }
+
     
     update(canvas, context, keys, friction, gravity) {
       if (keys[87] && !this.jumping) { // up arrow
@@ -54,9 +62,7 @@ class Player {
         this.y = canvas.height -24;
       }
       
-      // context.fillStyle = this.color;
-      
-      // context.fillRect(this.x, this.y, this.width, this.height);
+    
 
      if(keys[68]) {
        this.right = true;

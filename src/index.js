@@ -94,7 +94,13 @@ const deepDupArray = (arr) => {
   
   
     const timer = () => {
-      return (Date.now() - startTime) / 1000;
+      let time = Date.now
+      let zero = startTime
+        if(currentLevel > 0) {
+          time = time()
+        }
+        return (time - startTime) / 1000;
+
     };
 
     prevLevelMsgInterval = window.setInterval( () => {
@@ -108,6 +114,15 @@ const deepDupArray = (arr) => {
       jellyHeroGame.coinCounter = 0;
       [jellyHero.x, jellyHero.y, jellyHero.velocityX, jellyHero.velocityY] = [25, canvas.height - 70, 0, 0];
     };
+
+    // const jellyWalk = () => {
+
+    //   let xInt = 50
+    //     setInterval(() => {
+    //       xInt += 1
+    //     },100);
+    //   [jellyHero.x, jellyHero.y, jellyHero.velocityX, jellyHero.velocityY] = [xInt, canvas.height - 70, 0, 0];
+    // }
 
     const restartGame = () => {
       location.reload();
@@ -172,12 +187,16 @@ const deepDupArray = (arr) => {
     };
   
     retrieveHighScores();
+   
 
-    
+
     const update = () => {
+      
       if(jellyHeroGame.jellyDead){restartLevel()}
       if(jellyHeroGame.portalTouch) {
         currentLevel += 1;
+        // if(currentLevel === 7) jellyHero.jellyWalk()
+
         if(currentLevel > Object.keys(levels).length - 1) {
           jellyHeroGame.gameOver = true;
         }
@@ -200,6 +219,8 @@ const deepDupArray = (arr) => {
       } 
 
       // if(jellyHeroGame.gameOver) {
+
+      
         
         if(currentLevel > Object.keys(levels).length - 1) {
           const finalTime = timer();
@@ -297,7 +318,10 @@ const deepDupArray = (arr) => {
   
         context.font = '24px VT323';
         context.fillStyle = 'gray';
+        
+    
         context.fillText(`${timer()}`, 1000, 30);
+        
   
         context.fillStyle = 'yellow';
         context.fillText(welcomeLevelText, 450, 30);
@@ -311,6 +335,11 @@ const deepDupArray = (arr) => {
         requestAnimationFrame(update);
       }
     };
+    if(currentLevel === 7) jellyHero.jellyWalk()
+
     animations()
     update();
+    // console.log(currentLevel)
+    // if(currentLevel === 1) jellyHero.jellyWalk()
+
   });
