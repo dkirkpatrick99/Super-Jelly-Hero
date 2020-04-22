@@ -339,7 +339,5 @@ const deepDupArray = (arr) => {
 
     animations()
     update();
-    // console.log(currentLevel)
-    // if(currentLevel === 1) jellyHero.jellyWalk()
 
   });
