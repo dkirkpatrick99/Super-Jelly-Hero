@@ -94,11 +94,11 @@ const deepDupArray = (arr) => {
   
   
     const timer = () => {
-      let time = Date.now
+      let time = Date.now()
       let zero = startTime
-        if(currentLevel > 0) {
-          time = time()
-        }
+        // if(currentLevel > 0) {
+        //   time = time()
+        // }
         return (time - startTime) / 1000;
 
     };
