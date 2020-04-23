@@ -191,6 +191,8 @@ const deepDupArray = (arr) => {
 
 
     const update = () => {
+      if(keys[87]) { restartLevel(); }
+
       
       if(jellyHeroGame.jellyDead){restartLevel()}
       if(jellyHeroGame.portalTouch) {
