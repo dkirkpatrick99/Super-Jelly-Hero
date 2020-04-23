@@ -99,7 +99,7 @@ const deepDupArray = (arr) => {
         // if(currentLevel > 0) {
         //   time = time()
         // }
-        return (time - startTime) / 1000;
+        return (Date.now() - startTime) / 1000;
 
     };
 
@@ -154,7 +154,7 @@ const deepDupArray = (arr) => {
       scoreRefs.set(username);
     };
 
-    // writeScore('Wubalub', 551.279)
+    // writeScore('Klare!!!', 422.827)
   
     const displayHighScores = (highScores) => {
       const scoresTable = document.getElementById('scores-table');
