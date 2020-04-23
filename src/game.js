@@ -27,6 +27,8 @@ class Game {
         this.keysImg.src = "assets/image/keytilesreal.png";
         this.coinsImg = new Image();
         this.coinsImg.src = "assets/image/cointiles.png";
+        this.girlImg = new Image();
+        this.girlImg.src = "assets/image/menumeatboy.png";
     }
 
     drawLevel(level) {
@@ -134,6 +136,17 @@ class Game {
               
               this.context.drawImage(this.tiles3Img, 395, this.portal, 95, 95, platformX, platformY, platformWidth, platformHeight);
             
+            } else if(level[i][j] === 'd') {
+              let platformX = j * 60.2;
+              let platformY = i * 69.5;
+              let platformWidth = 30;
+              let platformHeight = 30;
+    
+              const dir = this.collisionCheck(this.jellyHero, {x: platformX, y: platformY, width: platformWidth, height: platformHeight });
+              if(dir) this.portalTouch = true
+              
+              this.context.drawImage(this.girlImg, 850, 582, 129, 129, platformX, platformY, platformWidth, platformHeight);
+
             } else if(level[i][j] === 'b') {
               let platformX = j * 60.2;
               let platformY = i * 58.5;
@@ -285,12 +298,11 @@ class Game {
         }
       }
 
+
       drawLevelMessages(currentLevel) {
         switch(currentLevel) {
-          case 0:
-            return 'Press "A" to move left, "D" to move right and "W" to jump! Get the key!';
           case 1:
-            return 'Hold "W" and the direction against a wall. Climb dat wall!!';
+            return 'Hold "W" and the direction against a wall. Climb that wall!!';
           case 2:
             return 'Woah, lava! Watch out!!';
           case 3:
@@ -298,13 +310,12 @@ class Game {
           case 4:
             return 'It\'s recess. The world\'s your jungle Jelly Hero!';
           case 5:
-            return '';
+            return 'Is it just me or is it getting hot in here?';
           case 6:
+            return 'Almost there! Dont give up now!!'
           case 7:
-            return 'Show me your ninja skills boi!';
-          case 8:
-            return 'Last level. Just go for it boi!';
-        
+            return 'YOU FOUND HER!! GREAT JOB JELLY HERO!';
+
           default:
             return '';
         }
@@ -314,3 +325,4 @@ class Game {
 
 export default Game;
 
+ 

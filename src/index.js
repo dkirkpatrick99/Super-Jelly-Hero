@@ -90,18 +90,27 @@ const deepDupArray = (arr) => {
     let currentLevel = 0;
     let welcomeLevelText = `Welcome to level ${currentLevel}`;
     let initialLevelState = deepDupArray(levels[currentLevel]);
-    let startTime = Date.now();
-  
-  
+    // let startTime = Date.now();
+    let startTime = 0
+
     const timer = () => {
-      let time = Date.now()
-      let zero = startTime
+
+      // let time = Date.now()
+      // let zero = startTime
         // if(currentLevel > 0) {
         //   time = time()
         // }
-        return (Date.now() - startTime) / 1000;
+        // return (Date.now() - startTime) / 1000;
 
+        // let i = 1
+        //   let int = setInterval(() => {
+        //     i += 1;
+        //   },100);
+
+          startTime += 0.0167
+          return parseFloat(startTime.toFixed(3));
     };
+
 
     prevLevelMsgInterval = window.setInterval( () => {
       levelMessage = '';
@@ -115,14 +124,14 @@ const deepDupArray = (arr) => {
       [jellyHero.x, jellyHero.y, jellyHero.velocityX, jellyHero.velocityY] = [25, canvas.height - 70, 0, 0];
     };
 
-    // const jellyWalk = () => {
+    const jellyWalk = () => {
 
-    //   let xInt = 50
-    //     setInterval(() => {
-    //       xInt += 1
-    //     },100);
-    //   [jellyHero.x, jellyHero.y, jellyHero.velocityX, jellyHero.velocityY] = [xInt, canvas.height - 70, 0, 0];
-    // }
+      let xInt = 50
+        setInterval(() => {
+          xInt += 1
+        },100);
+      [jellyHero.x, jellyHero.y, jellyHero.velocityX, jellyHero.velocityY] = [xInt, canvas.height - 70, 0, 0];
+    }
 
     const restartGame = () => {
       location.reload();
@@ -187,17 +196,31 @@ const deepDupArray = (arr) => {
     };
   
     retrieveHighScores();
-   
+
+   const drawIntroMessage = () => {
+      let msg = ('Press "A" to move left, "D" to move right and "W" to jump!');
+      let msg2 = 'Hello young jelly hero, your brave, young daughter has gotten lost while exploring in the woods!'
+      let msg3 = 'Your mission is simple, collect the all the coins and obtain the key to'
+      let msg4 = 'unlock the portal and find your lost daughter'
+      let msg5 = 'Race to get there in the shortest time!'
+      context.fillText(msg2, 85, 70);
+      context.fillText(msg3, 200, 100);
+      context.fillText(msg4, 330, 130);
+      context.fillText(msg5, 360, 160);
+      context.fillText(msg, 270, 220);
+
+
+    }
 
 
     const update = () => {
-      if(keys[87]) { restartLevel(); }
+      if(keys[82]) { restartGame(); }
 
       
       if(jellyHeroGame.jellyDead){restartLevel()}
       if(jellyHeroGame.portalTouch) {
         currentLevel += 1;
-        // if(currentLevel === 7) jellyHero.jellyWalk()
+        if(currentLevel === 7) jellyHero.jellyWalk()
 
         if(currentLevel > Object.keys(levels).length - 1) {
           jellyHeroGame.gameOver = true;
@@ -302,7 +325,7 @@ const deepDupArray = (arr) => {
           currentLevel = 0;
           levels = merge({}, Levels);
           initialLevelState = deepDupArray(levels[currentLevel]);
-          startTime = Date.now();
+          startTime = 0;
         // }
         // else {
           context.fillStyle = 'yellow';
@@ -321,15 +344,20 @@ const deepDupArray = (arr) => {
         context.font = '24px VT323';
         context.fillStyle = 'gray';
         
-    
-        context.fillText(`${timer()}`, 1000, 30);
-        
+        if (currentLevel > 0) {
+          context.fillText(`${timer()}`, 1000, 30);
+        }
   
         context.fillStyle = 'yellow';
         context.fillText(welcomeLevelText, 450, 30);
         context.save();
+        if (currentLevel < 1) {
+          drawIntroMessage()
+        }
 
+        context.font = '30px VT323';
         context.fillText(levelMessage, 250, 70);
+
 
   
         context.restore();
