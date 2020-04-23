@@ -1,7 +1,7 @@
 # Super Jelly Hero
 ## A platformer guiding our Jelly Hero through a series of levels
 
-[Live](https://dkirkpatrick99.github.io/Super-Jelly-Hero/)
+[Live Site](https://dkirkpatrick99.github.io/Super-Jelly-Hero/)
 ![Alt Text](/assets/videos/jelly.gif)
 
 ### Background
