@@ -35,6 +35,7 @@ There are additional features that I would like to implement for Super Jelly Her
 - [ ] Additional levels
 
 ### High Score Snippets
+![Alt Text](/assets/image/highscore.png)
 
 #### Get High Scores from database
 Retrieves the high scores from the Firebase NoSQL database asynchronously, then displays them to the player
