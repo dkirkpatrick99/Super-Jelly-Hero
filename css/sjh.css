@@ -54,7 +54,7 @@ li {
 .high-scores {
   border: 1px solid black;
   width: 25%;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 .high-scores h2 {
@@ -70,16 +70,16 @@ li {
 .directions {
   border: 1px solid black;
   width: 30%;
-  margin-right: 5px;
+  margin-right: 0px;
 }
 
 
 .controls {
   list-style: none;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 #game-over-modal {
