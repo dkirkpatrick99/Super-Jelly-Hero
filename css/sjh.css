@@ -43,8 +43,8 @@ li {
   width: 1075px;
   height: 604px;
   display: block;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   border: 2px solid black;
   background: url('../assets/image/backg.png') fixed;
   background-position-y: 76px;
@@ -54,7 +54,7 @@ li {
 .high-scores {
   border: 1px solid black;
   width: 25%;
-  margin-left: 5pxpx;
+  margin-left: 5px;
 }
 
 .high-scores h2 {
@@ -62,7 +62,7 @@ li {
 }
 
 #scores-table {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 
